@@ -1,7 +1,7 @@
 import { Live2DModel } from 'live2d-widget';
 
 const canvas = document.getElementById('live2d-canvas');
-const modelUrl = './assets/model.json';
+const modelUrl = './assets/hiyori_free_t08.model3.json';
 
 // モデル読み込みと設定
 let model;
@@ -25,7 +25,7 @@ Live2DModel.create({
         // タップイベント設定
         canvas.addEventListener('click', () => {
             const motionIndex = Math.floor(Math.random() * 8) + 1; // 1～8のランダム値
-            const motionFile = `./assets/motion/tap${motionIndex}.motion3.json`;
+            const motionFile = `./assets/motion/hiyori_m0${motionIndex}.motion3.json`;
             model.motion(motionFile); // モーションを再生
         });
     },
